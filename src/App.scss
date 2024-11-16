@@ -1,0 +1,213 @@
+@use "styles/variables" as vars;
+
+#root {
+  /* max-width: 1280px; */
+  margin: 0 auto;
+  /* padding: 2rem; */
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+h4 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+h5 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+h6 {
+  font-size: 0.875rem;
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.header {
+  color: vars.$fontgrey;
+  font-weight: 400;
+}
+
+.header-light {
+  color: white;
+  font-weight: 400;
+}
+
+ul {
+  list-style: disc;
+  margin: 0;
+  padding-left: 1rem;
+  font-weight: 600;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.fullscreen-x-padded-container {
+  margin: 0 1rem;
+}
+
+.section-type-1 {
+  display: flex;
+  min-height: 400px;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.section-type-2 {
+  display: flex;
+  min-height: 400px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-mobile-reverse {
+  max-width: 1100px;
+  align-items: center;
+  display: flex;
+  flex-direction: column-reverse;
+
+  @media (min-width: vars.$md) {
+    flex-direction: row;
+  }
+}
+
+.container-center {
+  align-items: center;
+  display: flex;
+
+  @media (min-width: vars.$md) {
+    flex-direction: row;
+    width: 1100px;
+  }
+}
+
+.container-default {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: vars.$md) {
+    flex-direction: row;
+    max-width: 1100px;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.col {
+  width: 100%;
+  display: flex;
+}
+
+.font-box {
+  flex-direction: column;
+  text-align: left;
+  color: vars.$fontgrey;
+}
+
+.font-box-center {
+  flex-direction: column;
+  color: vars.$fontgrey;
+}
+
+.font-box-dark {
+  flex-direction: column;
+  text-align: left;
+  color: white;
+  background-color: vars.$transgrey;
+}
+
+.button-light {
+  background-color: vars.$lightblue;
+  padding: 1em 2em;
+  border-radius: 0.2em;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: vars.$darkblue;
+  cursor: pointer;
+}
+
+.button-dark {
+  background-color: vars.$darkblue;
+  padding: 1em 2em;
+  border-radius: 0.2em;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+}
+
+.mx-1 {
+  margin: 0 1rem;
+}
+
+.m1 {
+  margin: 1rem;
+}
+.m2 {
+  margin: 2rem;
+}
+.p1 {
+  padding: 1rem;
+}
+.px-1 {
+  padding: 0 1rem;
+}
+.p-md-1 {
+  @media (min-width: vars.$md) {
+    padding: 1rem;
+  }
+}
+.p2 {
+  padding: 2rem;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.rounded-corners {
+  border-radius: 4px;
+}
+
+.bold {
+  font-weight: 500;
+}
