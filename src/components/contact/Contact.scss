@@ -1,0 +1,41 @@
+@use "../../styles/variables" as vars;
+
+.contact-form-wrapper {
+  margin: 1rem;
+  //   width: 400px;
+  @media (min-width: vars.$md) {
+    max-width: 550px;
+  }
+}
+
+.form-field-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+  color: vars.$fontgrey;
+  //   min-width: 1px !important;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.small-field {
+  max-width: 100px !important;
+  //   min-width: 50px !important;
+}
+
+#contact-image-wrapper {
+  display: none;
+  height: 1000px;
+  #contact-image {
+    height: 800px;
+  }
+  @media (min-width: vars.$md) {
+    display: block;
+    height: 1000px;
+  }
+}

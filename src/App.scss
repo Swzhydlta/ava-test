@@ -60,6 +60,38 @@ li {
   padding: 0;
 }
 
+form {
+  color: vars.$fontgrey;
+
+  input {
+    margin-top: 0.5rem;
+    border: 1px solid vars.$lightgrey;
+    border-radius: 2px;
+    background-color: vars.$lightblue;
+    height: 25px;
+    width: 100%;
+    // min-width: 1px !important;
+
+    // max-width: 100px !important;
+  }
+  textarea {
+    width: 100%;
+    margin-top: 0.5rem;
+    border: 1px solid vars.$lightgrey;
+    border-radius: 2px;
+    background-color: vars.$lightblue;
+    // min-width: 1px !important;
+  }
+
+  label {
+    width: 100%;
+  }
+}
+
+input {
+  border-color: red;
+}
+
 .fullscreen-x-padded-container {
   margin: 0 1rem;
 }
@@ -116,6 +148,7 @@ img {
 
 .col {
   width: 100%;
+  // max-width: 550px;
   display: flex;
 }
 
@@ -142,10 +175,11 @@ img {
   padding: 1em 2em;
   border-radius: 0.2em;
   border: none;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 600;
   color: vars.$darkblue;
   cursor: pointer;
+  // max-width: 100px;
 }
 
 .button-dark {
@@ -153,10 +187,11 @@ img {
   padding: 1em 2em;
   border-radius: 0.2em;
   border: none;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 600;
   color: white;
   cursor: pointer;
+  // max-width: 100px;
 }
 
 .mt-1 {
@@ -178,11 +213,17 @@ img {
 .m1 {
   margin: 1rem;
 }
+.ms-1 {
+  margin-left: 1rem;
+}
 .m2 {
   margin: 2rem;
 }
 .p1 {
   padding: 1rem;
+}
+.p2 {
+  padding: 2rem;
 }
 .px-1 {
   padding: 0 1rem;
