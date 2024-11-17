@@ -1,23 +1,11 @@
 import "./Home.scss";
+import Banner from "../banner/Banner";
 
 export default function Home() {
   return (
     <div>
       {/* section */}
-      <div id="home-banner-wrapper">
-        <div className="col home-banner-cta-col">
-          <div className="home-banner-cta-wrapper">
-            <h1 id="banner-header">Lorem ipsum solor</h1>
-            <h5 id="banner-subheader">
-              Quem vide tincidunt pri el, id mea omnium denique
-            </h5>
-            <button id="banner-button" className="button-dark">
-              Contact us
-            </button>
-          </div>
-        </div>
-        <div className="col home-banner-placeholder-col"></div>
-      </div>
+      <Banner />
       {/* section */}
       <div className="section-type-1">
         <div className="container-mobile-reverse mx-1">

@@ -2,22 +2,29 @@ import { BannerResponse } from "../interfaces/BannerResponse";
 
 const API_BASE = "https://interview-assessment.api.avamae.co.uk/api/v1";
 
-interface ResponseObj {
+interface BannerServiceResponse {
   status: string;
-  data: any;
+  data: BannerResponse;
 }
 
-interface contactService {
-  fetchBannerDetails: (page: number) => Promise<ResponseObj>;
+interface bannerService {
+  fetchBannerDetails: () => Promise<BannerServiceResponse>;
 }
 
-const service: contactService = {
+const service: bannerService = {
   fetchBannerDetails: async () => {
-    let responseObj: ResponseObj = { status: "", data: "" };
+    let responseObj: BannerServiceResponse = {
+      status: "",
+      data: {
+        Details: [],
+        Status: "",
+        Errors: [],
+      },
+    };
     try {
       const response = await fetch(`${API_BASE}/home/banner-details`);
       if (!response.ok) {
-        responseObj.status = "apiError";
+        responseObj.status = "error";
       } else {
         responseObj.status = "success";
       }
@@ -26,7 +33,6 @@ const service: contactService = {
       return responseObj;
     } catch (error) {
       responseObj.status = "error";
-      responseObj.data = error;
       return responseObj;
     }
   },
