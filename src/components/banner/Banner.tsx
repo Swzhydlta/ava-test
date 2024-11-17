@@ -2,15 +2,11 @@ import "./Banner.scss";
 import bannerService from "../../services/bannerService";
 import { useEffect, useState } from "react";
 import { BannerResponse } from "../../interfaces/BannerResponse";
-import bannerimg1 from "../../assets/shutterstock_407632243.jpg";
-import bannerimg2 from "../../assets/shutterstock_696636346.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
-// import "./styles.css";
 
 export default function Banner() {
   const [pageError, setPageError] = useState<boolean>(true);
