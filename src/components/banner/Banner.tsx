@@ -2,9 +2,17 @@ import "./Banner.scss";
 import bannerService from "../../services/bannerService";
 import { useEffect, useState } from "react";
 import { BannerResponse } from "../../interfaces/BannerResponse";
+import bannerimg1 from "../../assets/shutterstock_407632243.jpg";
+import bannerimg2 from "../../assets/shutterstock_696636346.jpg";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+// import "./styles.css";
 
 export default function Banner() {
-  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [pageError, setPageError] = useState<boolean>(true);
   const [apiResponse, setApiResponse] = useState<BannerResponse | null>(null);
 
@@ -13,8 +21,6 @@ export default function Banner() {
   }, []);
 
   const fetchData = async () => {
-    setIsLoading(true);
-
     try {
       const response = await bannerService.fetchBannerDetails();
       if (response.status === "error") {
@@ -22,27 +28,66 @@ export default function Banner() {
         return;
       }
       setApiResponse(response.data);
-      console.log("response", response);
-      setIsLoading(false);
       setPageError(false);
     } catch (error) {
       setPageError(true);
     }
   };
+
   return (
-    <div id="home-banner-wrapper">
-      <div className="col home-banner-cta-col">
-        <div className="home-banner-cta-wrapper">
-          <h1 id="banner-header">Lorem ipsum solor</h1>
-          <h5 id="banner-subheader">
-            Quem vide tincidunt pri el, id mea omnium denique
-          </h5>
-          <button id="banner-button" className="button-dark">
-            Contact us
-          </button>
-        </div>
-      </div>
-      <div className="col home-banner-placeholder-col"></div>
-    </div>
+    <>
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={30}
+        loop={true}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Pagination, Navigation]}
+        className="mySwiper"
+      >
+        {apiResponse ? (
+          apiResponse["Details"].map((detail, index) => (
+            <SwiperSlide key={index}>
+              <div
+                className="home-banner-wrapper"
+                style={{
+                  background: `linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%), url(${detail["ImageUrl"]}) center 25% / cover no-repeat`,
+                }}
+              >
+                <div className="col home-banner-cta-col">
+                  <div className="home-banner-cta-wrapper">
+                    <h1 className="banner-header">{detail["Title"]}</h1>
+                    <h5 className="banner-subheader">
+                      {detail["Subtitle"].slice(0, 50)}
+                    </h5>
+                    <button className="banner-button button-dark">
+                      Contact us
+                    </button>
+                  </div>
+                </div>
+                <div className="col home-banner-placeholder-col"></div>
+              </div>
+            </SwiperSlide>
+          ))
+        ) : (
+          <div className="home-banner-wrapper">
+            <div className="col home-banner-cta-col">
+              <div className="home-banner-cta-wrapper">
+                <h1 className="banner-header">Lorem ipsum solor</h1>
+                <h5 className="banner-subheader">
+                  {pageError && "There was an error loading banner data"}
+                </h5>
+                <button className="banner-button button-dark">
+                  Contact us
+                </button>
+              </div>
+            </div>
+            <div className="col home-banner-placeholder-col"></div>
+          </div>
+        )}
+      </Swiper>
+    </>
   );
 }

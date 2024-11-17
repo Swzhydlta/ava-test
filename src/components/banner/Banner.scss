@@ -1,13 +1,12 @@
 @use "../../styles/variables" as vars;
 
-#home-banner-wrapper {
+.home-banner-wrapper {
   background: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0.8) 0%,
-      rgba(0, 0, 0, 0) 50%,
-      rgba(0, 0, 0, 0) 100%
-    ),
-    url("../../assets/shutterstock_407632243.jpg") center 25% / cover no-repeat;
+    to right,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
   display: flex;
   height: 400px;
 
@@ -24,19 +23,24 @@
       flex-direction: column;
       text-align: left;
 
-      #banner-header {
+      .banner-header {
         color: white;
         font-weight: 300;
       }
-      #banner-subheader {
+      .banner-subheader {
         color: white;
         font-weight: 400;
         margin-top: 1.5em;
         text-align: left;
       }
-      #banner-button {
+      .banner-button {
         margin-top: 1.5em;
       }
     }
   }
 }
+
+// .swiper {
+//   width: 600px;
+//   height: 300px;
+// }
