@@ -1,11 +1,9 @@
 @use "../../styles/variables" as vars;
 
 .contact-form-wrapper {
-  margin: 1rem;
   display: flex;
   flex-direction: column;
   width: 100%;
-  //   width: 400px;
   @media (min-width: vars.$md) {
     width: 100%;
     max-width: 550px;
@@ -18,7 +16,6 @@
   width: 100%;
   text-align: left;
   color: vars.$fontgrey;
-  //   min-width: 1px !important;
 }
 
 .form-row {
@@ -28,8 +25,16 @@
   @media (min-width: vars.$md) {
     flex-direction: row;
   }
+}
 
-  // padding: 1rem;
+.form-row-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  @media (min-width: vars.$md) {
+    flex-direction: row;
+  }
 }
 
 .small-field {
@@ -69,7 +74,7 @@
   flex-direction: column;
   align-items: center;
   background-color: rgb(184, 214, 184);
-  color: vars.$fontgrey; // justify-content: center;
+  color: vars.$fontgrey;
   #valid-icon-wrapper {
     border-radius: 50px;
     width: 50px;
@@ -83,4 +88,8 @@
       width: auto;
     }
   }
+}
+
+#add-address-label {
+  text-align: left;
 }

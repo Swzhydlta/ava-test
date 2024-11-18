@@ -1,9 +1,7 @@
 @use "styles/variables" as vars;
 
 #root {
-  /* max-width: 1280px; */
   margin: 0 auto;
-  /* padding: 2rem; */
   text-align: center;
 }
 
@@ -39,9 +37,9 @@ h6 {
 }
 
 a {
-  color: inherit; /* Inherit color from parent, or specify your own */
-  cursor: pointer; /* Or specify pointer if needed */
-  text-decoration: none; /* Remove underline */
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .header {
@@ -75,18 +73,13 @@ form {
     border-radius: 2px;
     background-color: vars.$lightblue;
     height: 25px;
-    // width: 100%;
-    // min-width: 1px !important;
-
-    // max-width: 100px !important;
   }
+
   textarea {
-    // width: 100%;
     margin-top: 0.5rem;
     border: 1px solid vars.$lightgrey;
     border-radius: 2px;
     background-color: vars.$lightblue;
-    // min-width: 1px !important;
   }
 
   label {
@@ -153,11 +146,11 @@ input {
 
 img {
   width: 100%;
+  border-radius: 3px;
 }
 
 .col {
   width: 100%;
-  // max-width: 550px;
   display: flex;
 }
 
@@ -188,7 +181,6 @@ img {
   font-weight: 600;
   color: vars.$darkblue;
   cursor: pointer;
-  // max-width: 100px;
 }
 
 .button-dark {
@@ -200,7 +192,6 @@ img {
   font-weight: 600;
   color: white;
   cursor: pointer;
-  // max-width: 100px;
 }
 
 .mt-1 {
@@ -269,10 +260,22 @@ img {
 .bold {
   font-weight: 500;
 }
+.more-bold {
+  font-weight: 600;
+}
 
 #footer-wrapper {
+  display: flex;
+  justify-content: center;
   #footer {
+    display: flex;
+    width: 100%;
+    max-width: 1100px;
     border-top: 1px solid vars.$lightgrey;
     color: vars.$midgrey;
+    justify-content: center;
+    @media (min-width: vars.$md) {
+      justify-content: flex-end;
+    }
   }
 }

@@ -8,7 +8,7 @@ export default function Contact() {
   return (
     <div className="section-type-1">
       <div className="container-default p1">
-        <div className="col mt-2 p2">
+        <div className="col mt-2 p1">
           <div className="contact-form-wrapper">
             <div className="font-box">
               <h2 className="header">Contact Us</h2>

@@ -8,6 +8,7 @@ interface Error {
   FieldName: string;
   MessageCode: string;
 }
+
 export default function ContactForm() {
   let navigate = useNavigate();
   const [fullName, setFullName] = useState<string>("");
@@ -34,7 +35,6 @@ export default function ContactForm() {
     setPhoneNumbers([...phoneNumbers, ""]);
   };
 
-  // Handle form submission
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitting(true);
@@ -134,7 +134,7 @@ export default function ContactForm() {
             rows={8}
           ></textarea>
         </div>
-        <div className="form-row mt-1">
+        <div className="form-row-2 mt-1">
           <input
             type="checkbox"
             id="add-address"
@@ -142,7 +142,11 @@ export default function ContactForm() {
             checked={addressAdded}
             onChange={(e) => setAddressAdded(e.target.checked)}
           />
-          <label htmlFor="subscribe" className="bold">
+          <label
+            htmlFor="subscribe"
+            className="more-bold"
+            id="add-address-label"
+          >
             Add address details
           </label>
         </div>

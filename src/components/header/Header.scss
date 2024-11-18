@@ -2,33 +2,47 @@
 
 #header {
   display: flex;
-  padding: 0.1rem;
+  padding: 0.4rem;
+  justify-content: center;
 
-  #header-column-left {
-    align-items: center;
-    justify-content: center;
+  #header-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 1100px;
 
-    #company-logo {
-      height: 1.5em;
-      padding: 1em 0;
+    #header-column-left {
+      align-items: center;
+      justify-content: center;
+
+      @media (min-width: 889px) {
+        justify-content: flex-start;
+      }
+
+      #company-logo-wrapper {
+        display: flex;
+        #company-logo {
+          height: 2rem;
+          padding: 1em 0;
+        }
+      }
     }
-  }
 
-  #header-column-right {
-    display: none;
-    align-items: center;
-    justify-content: center;
+    #header-column-right {
+      display: none;
+      align-items: center;
+      justify-content: flex-end;
 
-    .header-link {
-      padding: 1em 2em;
-      font-size: 11px;
-      text-transform: uppercase;
-      font-weight: 800;
-      letter-spacing: 2px;
-      color: vars.$darkgrey;
-    }
-    @media (min-width: 889px) {
-      display: flex;
+      .header-link {
+        padding: 1em 2em;
+        font-size: 11px;
+        text-transform: uppercase;
+        font-weight: 800;
+        letter-spacing: 2px;
+        color: vars.$darkgrey;
+      }
+      @media (min-width: 889px) {
+        display: flex;
+      }
     }
   }
 }

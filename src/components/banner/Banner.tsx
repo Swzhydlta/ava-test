@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { BannerResponse } from "../../interfaces/BannerResponse";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
+import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -58,9 +59,11 @@ export default function Banner() {
                     <h5 className="banner-subheader">
                       {detail["Subtitle"].slice(0, 50)}
                     </h5>
-                    <button className="banner-button button-dark">
-                      Contact us
-                    </button>
+                    <Link to="/contact">
+                      <button className="banner-button button-dark">
+                        Contact us
+                      </button>
+                    </Link>
                   </div>
                 </div>
                 <div className="col home-banner-placeholder-col"></div>
@@ -77,9 +80,11 @@ export default function Banner() {
                     ? "There was an error loading banner data"
                     : "Donec ut lacus fermentum, viverra nunc"}
                 </h5>
-                <button className="banner-button button-dark">
-                  Contact us
-                </button>
+                <Link to="/contact">
+                  <button className="banner-button button-dark">
+                    Contact us
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="col home-banner-placeholder-col"></div>

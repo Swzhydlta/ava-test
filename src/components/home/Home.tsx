@@ -64,7 +64,6 @@ export default function Home() {
           <div className="col home-banner-placeholder-col m2"></div>
         </div>
       </div>
-
       {/* section */}
       <div className="section-type-2" id="home-final-section">
         <div className="container-default">
