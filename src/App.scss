@@ -69,13 +69,13 @@ form {
     border-radius: 2px;
     background-color: vars.$lightblue;
     height: 25px;
-    width: 100%;
+    // width: 100%;
     // min-width: 1px !important;
 
     // max-width: 100px !important;
   }
   textarea {
-    width: 100%;
+    // width: 100%;
     margin-top: 0.5rem;
     border: 1px solid vars.$lightgrey;
     border-radius: 2px;
@@ -136,8 +136,11 @@ input {
 .container-default {
   display: flex;
   flex-direction: column;
+  width: 100%;
+
   @media (min-width: vars.$md) {
     flex-direction: row;
+    width: 100%;
     max-width: 1100px;
   }
 }
@@ -215,6 +218,11 @@ img {
 }
 .ms-1 {
   margin-left: 1rem;
+}
+.ms-md-1 {
+  @media (min-width: vars.$md) {
+    margin-left: 1rem;
+  }
 }
 .m2 {
   margin: 2rem;

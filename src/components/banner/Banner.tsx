@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 export default function Banner() {
-  const [pageError, setPageError] = useState<boolean>(true);
+  const [pageError, setPageError] = useState<boolean>(false);
   const [apiResponse, setApiResponse] = useState<BannerResponse | null>(null);
 
   useEffect(() => {
@@ -73,7 +73,9 @@ export default function Banner() {
               <div className="home-banner-cta-wrapper">
                 <h1 className="banner-header">Lorem ipsum solor</h1>
                 <h5 className="banner-subheader">
-                  {pageError && "There was an error loading banner data"}
+                  {pageError
+                    ? "There was an error loading banner data"
+                    : "Donec ut lacus fermentum, viverra nunc"}
                 </h5>
                 <button className="banner-button button-dark">
                   Contact us
