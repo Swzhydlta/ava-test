@@ -1,4 +1,16 @@
-# React + TypeScript + Vite
+# Project created with React + TypeScript + Vite
+
+## Start the dev server:
+```
+npm run dev
+```
+
+## Serve the minified version
+```
+npm install -g serve
+serve -s dist
+```
+
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
