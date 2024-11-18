@@ -66,7 +66,7 @@ export default function Home() {
       </div>
 
       {/* section */}
-      <div className="section-type-2">
+      <div className="section-type-2" id="home-final-section">
         <div className="container-default">
           <div className="col font-box-center">
             <h4>Mauris suscipit ligula et sodales dictum</h4>

@@ -11,7 +11,9 @@ export default function Header() {
         </Link>
       </div>
       <div id="header-column-right" className="col">
-        <div className="header-link">Home</div>
+        <div className="header-link">
+          <Link to="/">Home</Link>
+        </div>
         <div className="header-link">About Us</div>
         <Link to="contact" className="header-link">
           Contact us

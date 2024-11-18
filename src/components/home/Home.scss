@@ -24,4 +24,14 @@
   display: flex;
   height: 400px;
   width: 100%;
+  margin-top: 1rem;
+  @media (min-width: vars.$md) {
+    margin-top: 0;
+  }
+}
+#home-final-section {
+  margin-top: 1rem;
+  @media (min-width: vars.$md) {
+    margin-top: 0;
+  }
 }

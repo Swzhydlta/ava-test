@@ -1,6 +1,3 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.scss";
 import Header from "./components/header/Header";
@@ -15,6 +12,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/contact/*" element={<Contact />} />
       </Routes>
+      <div id="footer-wrapper" className="mt-2">
+        <div id="footer" className="p2 mx-2">
+          Website development by <span>AVAMAE</span>
+        </div>
+      </div>
     </Router>
   );
 }

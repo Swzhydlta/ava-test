@@ -38,6 +38,12 @@ h6 {
   padding-left: 1rem;
 }
 
+a {
+  color: inherit; /* Inherit color from parent, or specify your own */
+  cursor: pointer; /* Or specify pointer if needed */
+  text-decoration: none; /* Remove underline */
+}
+
 .header {
   color: vars.$fontgrey;
   font-weight: 400;
@@ -212,6 +218,9 @@ img {
 .mx-1 {
   margin: 0 1rem;
 }
+.mx-2 {
+  margin: 0 2rem;
+}
 
 .m1 {
   margin: 1rem;
@@ -259,4 +268,11 @@ img {
 
 .bold {
   font-weight: 500;
+}
+
+#footer-wrapper {
+  #footer {
+    border-top: 1px solid vars.$lightgrey;
+    color: vars.$midgrey;
+  }
 }
